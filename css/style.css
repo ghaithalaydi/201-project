@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(228, 111, 111);
+}
+h1{
+    font-weight: bold;
+    color: rgb(53, 1, 1);
+}
+p{
+
+    color:rgb(44, 1, 1);
+}
+ul {
+    color: rgb(22, 1, 37);
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+}
+.navList {
+    display: inline;
+}
+
+.eduAndExpList {
+    font-style:italic;
+    color: rgb(1, 1, 39);
+    border: 3px solid rgb(34, 22, 46); 
+    margin-right: 300px;
+    margin-left: 300px;
+    margin-top: 20px;
+    font-size: 16px;
+
+}
+
+.city {
+    font-style: italic;
+    color: darkviolet;
+    display: inline-block;
+    margin-left: 60px;
+    font-size: 20px;
+}
+ol{
+    text-align: center;
+}

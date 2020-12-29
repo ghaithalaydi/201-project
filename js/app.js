@@ -1,6 +1,7 @@
 'use strict'
+var score = 0;
 var userName = prompt("What is your good name?");
-alert("Welcome to the website" + userName + ", Lets get to know each other a little bit more");
+alert("Welcome to the website " + userName + ", Lets get to know each other a little bit more");
 
 var firstAnswer = prompt("Do you think that I am an Engineer? (yes / no answers only)");
 // console.log(firstAnswer);
@@ -9,6 +10,7 @@ switch (firstAnswer.toLowerCase()) {
 
     case "yes":
         alert("You have guessed right!");
+        score++;
         break;
 
     case "no":
@@ -23,6 +25,7 @@ switch (secondAnswer.toLowerCase()) {
 
     case "yes":
         alert("You have guessed right!");
+        score++;
         break;
 
     case "no":
@@ -37,6 +40,7 @@ switch (thirdAnswer.toLowerCase()) {
 
     case "no":
         alert("You have guessed right!");
+        score++;
         break;
 
     case "yes":
@@ -51,6 +55,7 @@ switch (fourthAnswer.toLowerCase()) {
 
     case "yes":
         alert("You have guessed right!");
+        score++;
         break;
 
     case "no":
@@ -65,11 +70,67 @@ switch (fifthAnswer.toLowerCase()) {
 
     case "no":
         alert("You have guessed right!");
+        score++;
         break;
 
     case "yes":
-        alert("You have done well up until this point");
+        alert("Well note true, but uou have done well up until this point");
         break;
 }
-
 alert("Well " + userName + " it was a pleasure!");
+// First Feature
+var i = 0;
+var userGuess = prompt("I have a number in mind (0-30) can you try and guess what it is? [You have 4 attempts}");
+parseInt(userGuess);
+if (userGuess == 18) {
+    alert("You are a Phsycic!");
+    score++;
+}
+else {
+    while (userGuess != 18 && i < 4) {
+        if (userGuess < 6) {
+            alert("The number you have entered is too low!");
+        }
+        else if (userGuess > 25) {
+            alert("The number you have entered is too high!");
+        }
+        else if (userGuess > 6 && userGuess < 18) {
+            alert("Close! try again");
+        }
+        else if (userGuess > 18 && userGuess < 25) {
+            alert("Close! try again");
+        }
+        userGuess = prompt("try again");
+        parseInt(userGuess);
+        i++;
+    }
+    if (i == 4) {
+        alert("Your attempts has been depleted, the number is 18");
+    }
+    else {
+        alert("Well done");
+        score++;
+    }
+}
+//Second feature
+var x = 0;
+var cityList = ['barcelona', 'berlin', 'bentota'];
+var cityName = prompt("Can you guess the name of one of my favourite travel destinations?").toLowerCase();
+if (cityName === cityList[0] || cityName === cityList[1] || cityName === cityList[2]) {
+    alert("You have guessed right, answers include " + cityList[0] + " & " + cityList[1] + " & " + cityList[2]);
+    score++;
+}
+else {
+    while (cityName !== cityList[0] && cityName !== cityList[1] && cityName !== cityList[2] && x < 7) {
+        cityName = prompt("Try Again!").toLowerCase();
+        x++;
+    }
+    if (x == 7) {
+        alert("Your attempts has been depleted, the correct answers are " + cityList[0] + " &" + cityList[1] + " &" + cityList[2]);
+    }
+    else {
+        alert("You have guessed right, answers include " + cityList[0] + " & " + cityList[1] + " & " + cityList[2]);
+        score++;
+    }
+}
+alert("Your final score is "+ score+ "/7");   
