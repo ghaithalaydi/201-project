@@ -125,7 +125,7 @@ else {
         parseInt(userGuess);
         i++;
     }
-    if (i == 4) {
+    if (i == 3) {
         alert("Your attempts has been depleted, the number is 18");
     }
     else {
