@@ -3,7 +3,16 @@ var score = 0;
 var userName = prompt("What is your good name?");
 alert("Welcome to the website " + userName + ", Lets get to know each other a little bit more");
 
-var firstAnswer = prompt("Do you think that I am an Engineer? (yes / no answers only)");
+questionOne ();
+questionTwo();
+questionThree();
+questionFour();
+questionFive();
+questionSix();
+questionSeven();
+endingFunction();
+
+function questionOne (){var firstAnswer = prompt("Do you think that I am an Engineer? (yes / no answers only)");
 // console.log(firstAnswer);
 alert("Your answer was: " + firstAnswer);
 switch (firstAnswer.toLowerCase()) {
@@ -17,8 +26,10 @@ switch (firstAnswer.toLowerCase()) {
         alert("Maybe you will get the next one right");
         break;
 }
+}
 
-var secondAnswer = prompt("Is my prefered field of work related to consultancy work? (yes / no answers only)");
+function questionTwo(){
+    var secondAnswer = prompt("Is my prefered field of work related to consultancy work? (yes / no answers only)");
 // console.log(secondAnswer);
 alert("Your answer was: " + secondAnswer);
 switch (secondAnswer.toLowerCase()) {
@@ -32,8 +43,10 @@ switch (secondAnswer.toLowerCase()) {
         alert("Maybe you will get the next one right");
         break;
 }
+}
 
-var thirdAnswer = prompt("Do I have over 7 years of work experience? (yes / no answers only)");
+function questionThree(){
+    var thirdAnswer = prompt("Do I have over 7 years of work experience? (yes / no answers only)");
 // console.log(thirdAnswer);
 alert("Your answer was: " + thirdAnswer);
 switch (thirdAnswer.toLowerCase()) {
@@ -47,8 +60,10 @@ switch (thirdAnswer.toLowerCase()) {
         alert("Maybe you will get the next one right");
         break;
 }
+}
 
-var fourthAnswer = prompt("Do I speak any other languages apart from english and arabic? (yes / no answers only)");
+function questionFour(){
+    var fourthAnswer = prompt("Do I speak any other languages apart from english and arabic? (yes / no answers only)");
 // console.log(fourthAnswer);
 alert("Your answer was: " + fourthAnswer);
 switch (fourthAnswer.toLowerCase()) {
@@ -62,8 +77,10 @@ switch (fourthAnswer.toLowerCase()) {
         alert("Maybe you will get the next one right");
         break;
 }
+}
 
-var fifthAnswer = prompt("Do you think i prefer smaller projects to bigger ones? (yes / no answers only)");
+function questionFive(){
+    var fifthAnswer = prompt("Do you think i prefer smaller projects to bigger ones? (yes / no answers only)");
 // console.log(fifthAnswer);
 alert("Your answer was: " + fifthAnswer);
 switch (fifthAnswer.toLowerCase()) {
@@ -77,9 +94,13 @@ switch (fifthAnswer.toLowerCase()) {
         alert("Well note true, but uou have done well up until this point");
         break;
 }
-alert("Well " + userName + " it was a pleasure!");
+}
+
+
+
 // First Feature
-var i = 0;
+function questionSix(){
+    var i = 0;
 var userGuess = prompt("I have a number in mind (0-30) can you try and guess what it is? [You have 4 attempts}");
 parseInt(userGuess);
 if (userGuess == 18) {
@@ -87,7 +108,7 @@ if (userGuess == 18) {
     score++;
 }
 else {
-    while (userGuess != 18 && i < 4) {
+    while (userGuess != 18 && i < 3) {
         if (userGuess < 6) {
             alert("The number you have entered is too low!");
         }
@@ -104,7 +125,7 @@ else {
         parseInt(userGuess);
         i++;
     }
-    if (i == 4) {
+    if (i == 3) {
         alert("Your attempts has been depleted, the number is 18");
     }
     else {
@@ -112,8 +133,11 @@ else {
         score++;
     }
 }
+}
+
 //Second feature
-var x = 0;
+function questionSeven(){
+    var x = 0;
 var cityList = ['barcelona', 'berlin', 'bentota'];
 var cityName = prompt("Can you guess the name of one of my favourite travel destinations?").toLowerCase();
 if (cityName === cityList[0] || cityName === cityList[1] || cityName === cityList[2]) {
@@ -133,4 +157,8 @@ else {
         score++;
     }
 }
-alert("Your final score is "+ score+ "/7");   
+}
+function endingFunction(){
+alert("Your final score is "+ score+ "/7"); 
+alert("Well " + userName + " it was a pleasure!");
+}
