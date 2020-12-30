@@ -108,7 +108,7 @@ if (userGuess == 18) {
     score++;
 }
 else {
-    while (userGuess != 18 && i < 4) {
+    while (userGuess != 18 && i < 3) {
         if (userGuess < 6) {
             alert("The number you have entered is too low!");
         }
