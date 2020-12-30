@@ -4,6 +4,15 @@
 + added more questions with greater and more advance functionality, with the use of loops and conditional statement
 + Initial Css enhancements were added to the web page
 
-This is a Plug and play webpage 
+
+**Navigator:Ghaith**
+**Driver:Ruba Othman**
+
++ add functions :
++ moved the greeting alert to the bottom of the page 
+ 
+This is a Plug and play webpage
+
 This code was developed by *Ghaith Al-Aydi*
 Please read the **licensing rules** provided within the project files
+
